@@ -1,4 +1,4 @@
-# Приложение для блога.
+# Web-приложение для блога. (Кейс-задача № 3)
 
 ## Основной функционал
 
@@ -11,20 +11,24 @@
 
 ## Технологический стек
 
-*   **Бэкенд:** PHP 8.x, Laravel 11
-*   **Фронтенд:** HTML5, Blade, Tailwind CSS, Alpine.js
-*   **База данных:** MySQL
-*   **Серверное окружение:** Open Server
+- Бэкенд: PHP 8.4, Laravel 12
+- Фронтенд: HTML5, Blade, Tailwind CSS, Alpine.js
+- База данных: MySQL 8.4
+- Серверное окружение: Open Server / Любой веб-сервер с поддержкой PHP и MySQL
 
 ## Установка и запуск
 
-1.  Склонировать репозиторий: `git clone https://github.com/ТВОЙ_НИКНЕЙМ/Semester-4_Case-task-3.git`
-2.  Перейти в папку проекта: `cd Semester-4_Case-task-3`
-3.  Установить PHP-зависимости: `composer install`
-4.  Скопировать файл `.env.example` в `.env`: `cp .env.example .env`
-5.  Сгенерировать ключ приложения: `php artisan key:generate`
-6.  Настроить подключение к вашей БД в файле `.env`
-7.  Выполнить миграции для создания таблиц в БД: `php artisan migrate`
-8.  Установить JS-зависимости: `npm install`
-9.  Собрать фронтенд: `npm run dev`
-10. Настроить локальный сервер (например, Open Server) на папку `/public` проекта.
+1. Для запуска проекта рекомендуется установить: Open Server 6,  Composer, Git, PHP версии 8.2 или выше, MySQL, Node.js и npm.
+2. Запустить консоль Open Server и перейти в папку: `cd C:\OSPanel\home\`
+3. Склонировать репозиторий: `git clone https://github.com/vova2442/blog-app`
+4. Перейти в папку проекта `cd C:\OSPanel\home\blog-app` и  установить PHP-зависимости `composer install`
+5. Создать файл окружения .env: `copy .env.example .env` (Для macOS / Linux: `cp .env.example .env`)
+6. Сгенерировать ключ приложения: `php artisan key:generate`
+7. Создать пустую базу данных в phpmyadmine (с любым именем) с кодировкой `utf8mb4_unicode_ci`.
+8. Открыйть файл .env и указать данные для подключения к БД: `DB_CONNECTION=mysql (имя БД), DB_HOST=MySQL-8.4 (имя сервера), DB_PORT=3306, DB_DATABASE=bookstore (имя БД), DB_USERNAME=root, DB_PASSWORD= (можно оставить пустым)`
+9. Выполнить миграции и наполнить базу данных: `php artisan migrate --seed`
+10. Установить JS-зависимости: `npm install`
+11. Собрать фронтенд-ресурсы: `npm run build`
+12. Перезапустить Open Server
+
+После выполнения последней команды приложение будет доступно по адресу: http://blog-app/ или через меню Open Server
